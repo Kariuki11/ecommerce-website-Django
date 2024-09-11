@@ -15,7 +15,8 @@ CATEGORY_CHOICES = (
 
 class Product(models.Model):
     title = models.CharField(max_length=100)
-    selling_price = models.FilteredRelation()
+    #selling_price = models.FilteredRelation()
+    selling_price = models.DecimalField(max_digits=10, decimal_places=2)
     discounted_price = models.FloatField()
     description = models.TextField()
     composition = models.TextField(default='')
