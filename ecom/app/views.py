@@ -1,7 +1,6 @@
-from urllib import request
-from django.http import HttpRequest
 from django.shortcuts import render
 from django.views import View
+from . models import Product
 
 
 # Create your views here.
@@ -10,4 +9,5 @@ def home(request):
 
 class CategoryView(View):
     def get (self,request,val):
+        product = Product.objects.filter(category=val)
         return render(request, "app/category.html",locals())
