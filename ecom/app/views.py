@@ -14,7 +14,7 @@ class CategoryView(View):
         return render(request, "app/category.html",locals())
 
 class ProductDetail(View):
-    def get(self,request):
+    def get(self,request,pk):
         return render(request, "app/productdetail.html")
 
 
