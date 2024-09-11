@@ -11,7 +11,8 @@ def home(request):
 class CategoryView(View):
     def get (self,request,val):
         product = Product.objects.filter(category=val)
-        title = product.objects.filter(category=val).values('title').annotate(total=Count('title'))
+        #title = product.objects.filter(category=val).values('title').annotate(total=Count('title'))
+        title = product.values('title')#.annotate(total=Count('title'))
         return render(request, "app/category.html",locals())
 
 
