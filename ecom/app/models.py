@@ -2,6 +2,17 @@ from django.db import models
 
 # Create your models here.
 
+CATEGORY_CHOICES = (
+    ('CR', 'Curd'),
+    ('ML', 'Milk'),
+    ('LS', 'Lassi'),
+    ('MS', 'Milkshake'),
+    ('IC', 'Icecreams'),
+    ('CZ', 'Cheese'),
+    ('GH', 'Ghee'),
+    ('PN', 'Paneer')
+)
+
 class Product(models.Model):
     title = models.CharField(max_length=100)
     selling_price = models.FilteredRelation()
