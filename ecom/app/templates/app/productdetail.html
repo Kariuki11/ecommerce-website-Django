@@ -13,7 +13,14 @@
                 <small class="text-decoration-line-through text-muted fs-5"><del>Rs.{{product.selling_price}}/-
                 </del></small>
                 <br><br><h4>Product Features</h4>
-                <h6 style="font-family: Georgia; font-size: 20px;">{{product.description}}</h6>
+                <ul class="fs-5" style="font-family: Rajdhani;">
+                    <li>{{product.description}}</li>
+                </ul>
+                <div class="buttons row flex" style="font-family: Rajdhani;">
+                    <button type="submit" class="d-grid gap-2 btn1 btn btn-danger p-1 m-1 btn-lg text-decoration-none text-white">Add to Cart</button>
+                    <div class="btn btn-dark p-1 m-1 btn-lg"><a href="#" class="text-decoration-none text-white">Buy Now</a></div>
+                    <button type="submit" class="d-grid gap-2 btn2 btn btn-warning p-1 m-1 btn-lg text-decoration-none text-white">Buy Now</button>
+                </div>
             </div>
         </div>
     </div>
