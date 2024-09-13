@@ -19,5 +19,5 @@ class CustomerRegistrationForm(UserCreationForm):
 class MyPasswordResetForm(PasswordChangeForm):
     pass
 
-class CustomerProfileForm(forms.ModelForm):
-    
+#class CustomerProfileForm(forms.ModelForm):
+#class CustomerProfileForm(forms.ModelForm):
