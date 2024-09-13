@@ -13,6 +13,10 @@ class CategoryView(View):
         title = product.values('title')#.annotate(total=Count('title'))
         return render(request, "app/category.html",locals())
 
+class CategoryTitle(View):
+  def get(self, request, val):
+    product = Product.objects.filter(title=val)
+    return render(request, "app/category.html", locals())
 class ProductDetail(View):
     def get(self,request,pk):
         product = Product.objects.get(pk=pk)
