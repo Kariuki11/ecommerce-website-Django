@@ -24,3 +24,4 @@ class MyPasswordResetForm(PasswordChangeForm):
 class CustomerProfileForm(forms.ModelForm):
     class Meta:
         model = Customer
+        fields=['name', 'locality', 'city', 'mobile', 'state', 'zipcode']
