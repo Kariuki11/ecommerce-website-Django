@@ -45,6 +45,8 @@ class CustomerRegistrationView(View):
     else:
       messages.warning(request, 'Invalid Input Data')
     return render(request, 'app/customerregistration.html', locals())
+  
+class ProfileView(View):
     
 
 
