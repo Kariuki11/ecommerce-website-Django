@@ -2,5 +2,12 @@
 {% load static %}
 {% block title %}Product Details{% endblock title %}
 {% block main-content %}
-<h1>Product Detail{{product}}</h1>
+    <div class="container">
+        <div class="row flex justify-content-between">
+            <div class="img2 col-lg-5 mt-5">
+                <img src="{{product.product_image.url}}" class="image col-xs-5 col-sm-12 col-lg-12 mt-3 text-sm-center w-100 h-75" alt="product">
+            </div>
+            <div></div>
+        </div>
+    </div>
 {% endblock main-content %}
