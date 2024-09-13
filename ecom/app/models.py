@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.contrib.auth.models import User
 # Create your models here.
 
 CATEGORY_CHOICES = (
@@ -7,11 +7,12 @@ CATEGORY_CHOICES = (
     ('ML', 'Milk'),
     ('LS', 'Lassi'),
     ('MS', 'Milkshake'),
+    ('PN', 'Paneer'),
+    ('GH', 'Ghee'),
     ('IC', 'Icecreams'),
     ('CZ', 'Cheese'),
-    ('GH', 'Ghee'),
-    ('PN', 'Paneer')
 )
+
 
 class Product(models.Model):
     title = models.CharField(max_length=100)
@@ -27,4 +28,14 @@ class Product(models.Model):
     def __str__(self):
         return self.title
     
+class Customer(models.Model):
+    user = models.ForeignKey(User,on_delete=models.CASCADE)
+    name = models.CharField(max_length=200)
+    locality = models.CharField(max_length=200)
+    city = models.CharField(max_length=200)
+    mobile = models.IntegerField(default=0)
+    zipcode = models.IntegerField()
+    state = models.CharField(choices=STATE_CHOICES,max_length=100)
+    def __str__(self):
+        return str(self.id)
     
