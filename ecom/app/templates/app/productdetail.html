@@ -7,7 +7,10 @@
             <div class="img2 col-lg-5 mt-5">
                 <img src="{{product.product_image.url}}" class="image col-xs-5 col-sm-12 col-lg-12 mt-3 text-sm-center w-100 h-75" alt="product">
             </div>
-            <div></div>
+            <div class="productdetail col-lg-5">
+                <h1 style="font-family: Georgia; font-size: 50px;">{{product.title}}</h1>
+                <h6 style="font-family: Georgia; font-size: 30px;">Rs.{{product.discounted_price}}/-</h6>
+            </div>
         </div>
     </div>
 {% endblock main-content %}
